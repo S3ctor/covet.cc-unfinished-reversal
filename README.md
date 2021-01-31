@@ -1,6 +1,13 @@
 # Reversal of the p2c covet.cc
 This reversal will cover the protection of their product's image, the authentication, driver communication and anything else I came across whilst reversing the p2c.
 
+# The Crack
+c0gnito emulator bypasses their loader's authentication without trouble,
+![](https://github.com/S3ctor/covet.cc-reversal/blob/main/assets/bypass_auth1.PNG) 
+
+![](https://github.com/S3ctor/covet.cc-reversal/blob/main/assets/inside.PNG)
+cheat loads fine, here's the cheat being used https://streamable.com/0ar5w6. It's an average-shit cheat nothing too special as you can see. I'd assume that this method could be used to crack every product they have for sale currently I didn't gain access to anyother cheats they provide.
+
 # Authentication
 Covet.cc utilizes a third party vendor https://c0gnito.cc/ to authenticate their users and manage access to their product. c0gnito itself is already extremely vulnerable so by using my c0gnito emulation https://github.com/S3ctor/c0gnito-authentication-emulation we can gain semi-permanent access to their product (semi at this stage due to the driver download being an external link to discord) I could also use the 1.0 version of the emulation due to the c0gnito.dll module being located in dir. Authentication summary basically their negligence towards their authentication is an extremely major weak point because of c0gnitos vulnerability.
 
@@ -14,3 +21,4 @@ I also ran my PE appropriator https://github.com/S3ctor/PE-appropriator to see i
 ![](https://github.com/S3ctor/covet.cc-reversal/blob/main/assets/pe_appro.PNG)
 
 # Driver communication
+
