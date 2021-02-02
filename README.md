@@ -24,7 +24,8 @@ I also ran my PE appropriator https://github.com/S3ctor/PE-appropriator to see i
 ![](https://github.com/S3ctor/covet.cc-reversal/blob/main/assets/pe_appro.PNG)
 
 # Driver communication
-Starting off with the driver query types; they first initialize their hook on the driver control dispatch method to securely by using this method from UC https://www.unknowncheats.me/forum/anti-cheat-bypass/372215-driver-control-dispatch-hooking-method.html the way the logic it is by awaiting the process r5apex.exe to be active and then they initialize communication by setting a global bool in the driver to true which the drivers ioctl handler rely's on to complete the driver queries.
+Starting off with the driver query types; they first initialize their hook on the driver control dispatch method to securely by using this method from UC https://www.unknowncheats.me/forum/anti-cheat-bypass/372215-driver-control-dispatch-hooking-method.html the way the logic it is by awaiting the process r5apex.exe to be active and then they initialize communication by setting a global bool in the driver to true which the drivers ioctl handler rely's on to complete the driver queries. The other queries use the same IO control code if I remember correctly (youll be able to locate the IO control codes for all the other driver primitives)
+
 ![](https://github.com/S3ctor/covet.cc-reversal/blob/main/assets/io_controller1.PNG)
 
 (top image is usermode bottom image is kernel)
